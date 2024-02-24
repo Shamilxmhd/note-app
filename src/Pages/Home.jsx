@@ -38,11 +38,21 @@ function Home() {
     console.log(addNotes);
 
     return (
-        <div style={{ width: '600px', height: '100%' }} className='border shadow rounded'>
-            
+        <div style={{ width: '600px', height: '100%' }} className='border shadow rounded '>
+            <Form className="d-flex mt-5 w-50 ms-5">
+                <Form.Control
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                />
+                <Button variant="outline-success">Search</Button>
+            </Form>
             <div className=' p-2 m-2 d-flex justify-content-between'>
+                
                 <button className='btn btn-info rounded-3 border w-100'><h5 className='mt-2 fw-bolder'>NOTES </h5></button>
                 <button onClick={handleShow} className='btn  '><img width={'30px'} src="https://cdn-icons-png.flaticon.com/512/1004/1004733.png" alt="" /></button>
+                
             </div>
             <div>
                 <Modal centered
